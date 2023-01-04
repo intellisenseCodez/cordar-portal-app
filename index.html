@@ -17,14 +17,14 @@
             });
         </script>
         <link href="./assets/dist/css/base.css" rel=stylesheet type="text/css"/>
-        <link href="./https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="./assets/plugins/toastr/toastr.min.css" rel=stylesheet type="text/css"/>
         <link href="./assets/plugins/emojionearea/emojionearea.min.css" rel=stylesheet type="text/css"/>
         <link href="./assets/plugins/monthly/monthly.min.css" rel=stylesheet type="text/css"/>
         <link href="./assets/plugins/amcharts/export.css" rel=stylesheet type="text/css"/>
         <link href="./assets/dist/css/component_ui.min.css" rel=stylesheet type="text/css"/>
         <link id=defaultTheme href="./assets/dist/css/skins/skin-dark-1.min.css" rel=stylesheet type="text/css"/>
-        <link href="./assets/dist/css/style.css" rel=stylesheet type="text/css"/>
+        <link href="./assets/dist/css/custom.css" rel=stylesheet type="text/css"/>
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -39,7 +39,7 @@
                         <span class="sr-only">Toggle navigation</span>
                         <i class="material-icons">apps</i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="./index.html">
                         <img class="main-logo" src="./assets/dist/img/codar-shape-logo.png" id="bg" alt="logo">
                         <p>Portal</p>
                         <!--<span>AdminPage</span>-->
@@ -65,8 +65,11 @@
                             </div>
                         </li>
                         <!-- /.Full page search -->
+                        <!-- <li><a id="menu-toggle" href="#"><i class="material-icons">apps</i></a></li> -->
                         <!-- /.Sidebar menu toggle icon -->
-                         <li><a href="#"class="btn-buy hidden-xs hidden-sm hidden-md">ADMIN</a></li>
+                        
+                        <!--End dropdown mega menu-->
+                        <li><a href="#" class="btn-buy hidden-xs hidden-sm hidden-md">Admin</a></li>
                     </ul>
                     <ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
@@ -181,6 +184,11 @@
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         
+                        <li class="log_out">
+                            <a href="#">
+                                <i class="material-icons">power_settings_new</i>
+                            </a>
+                        </li><!-- /.Log out -->
                     </ul> <!-- /.navbar-top-links -->
                 </div>
             </nav>
@@ -188,7 +196,7 @@
             <div class="sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="nav-heading "> <span>Welcome&nbsp;&nbsp;&nbsp;&nbsp;<span></li>
+                        <li class="nav-heading "> <span>Welcome </span></li>
                         <li class="active"><a href="index.html" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">group</i> Students <i class="material-icons" style="padding-left: 90px;">arrow_drop_down</i></span></a>
@@ -255,12 +263,10 @@
                         <li><a href="#" class="material-ripple"><i class="material-icons">lock</i> Roles</a></li>
                         <li><a href="#" class="material-ripple"><i class="material-icons">settings</i> Settings</a></li>
 
-
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
-
             <!-- /.Left Sidebar-->
             <div class="side-bar right-bar">
                 <div class="">
@@ -372,7 +378,7 @@
                                 <a href="#">
                                     <div class="inbox-item">
                                         <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Opara Success</strong>
+                                        <strong class="inbox-item-author">Naeem Khan</strong>
                                         <span class="inbox-item-date">-13:40 PM</span>
                                         <p class="inbox-item-text">Hey! there I'm available...</p>
                                         <span class="profile-status available pull-right"></span>
@@ -381,7 +387,7 @@
                                 <a href="#">
                                     <div class="inbox-item">
                                         <div class="inbox-item-img"><img src="assets/dist/img/avatar2.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Vera Bassey</strong>
+                                        <strong class="inbox-item-author">Sala Uddin</strong>
                                         <span class="inbox-item-date">-13:40 PM</span>
                                         <p class="inbox-item-text">Hey! there I'm available...</p>
                                         <span class="profile-status away pull-right"></span>
@@ -408,7 +414,7 @@
                                 <a href="#">
                                     <div class="inbox-item">
                                         <div class="inbox-item-img"><img src="assets/dist/img/avatar5.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Solomon John</strong>
+                                        <strong class="inbox-item-author">Amir Khan</strong>
                                         <span class="inbox-item-date">-13:40 PM</span>
                                         <p class="inbox-item-text">Hey! there I'm available...</p>
                                         <span class="profile-status available pull-right"></span>
@@ -417,7 +423,7 @@
                                 <a href="#">
                                     <div class="inbox-item">
                                         <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Peterson</strong>
+                                        <strong class="inbox-item-author">Salman Khan</strong>
                                         <span class="inbox-item-date">-13:40 PM</span>
                                         <p class="inbox-item-text">Hey! there I'm available...</p>
                                         <span class="profile-status available pull-right"></span>
@@ -447,7 +453,6 @@
                 </div>
             </div>
             <!-- /.Right Sidebar -->
-
             <div class=control-sidebar-bg></div>
             <div id=page-wrapper>
                 <div class=content>
@@ -768,10 +773,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <script src="./assets/plugins/jQuery/jquery-1.12.4.min.js"></script>
         <script src="./assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
         <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
