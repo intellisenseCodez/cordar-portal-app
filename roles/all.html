@@ -6,7 +6,7 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name=description content="">
         <meta name=author content="">
-        <title>New Instructor - Codar Student's Management Portal</title>
+        <title>Role Lists - Codar Student's Management Portal</title>
         <link rel="shortcut icon" href="../assets/dist/img/codar-shape-logo.png" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
@@ -19,7 +19,10 @@
         <!-- START GLOBAL MANDATORY STYLE -->
         <link href="../assets/dist/css/base.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+        <!-- START PAGE LABEL PLUGINS -->
+        <link href="../assets/plugins/datatables/dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../assets/plugins/modals/modal-component.css" rel="stylesheet" type="text/css"/>
+
         <!-- START THEME LAYOUT STYLE -->
         <link href="../assets/dist/css/component_ui.min.css" rel="stylesheet" type="text/css"/>
         <link id="defaultTheme" href="../assets/dist/css/skins/skin-dark-1.min.css" rel="stylesheet" type="text/css"/>
@@ -165,7 +168,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                
+                               
                                 <li class="rad-dropmenu-footer"><a href="#">See all notifications</a></li>
                             </ul>  <!-- /.dropdown-alerts -->
                             <!-- /.dropdown-alerts -->
@@ -202,8 +205,8 @@
                         <li>
                             <a href="#" class="material-ripple"><i class="material-icons">group</i> Instructor <i class="material-icons" style="padding-left: 85px;">arrow_drop_down</i></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="./all.html">View all Instructors</a></li>
-                                <li><a href="./add.html">Add New Instructors</a></li>
+                                <li><a href="../instructor/all.html">View all Instructors</a></li>
+                                <li><a href="../instructor/add.html">Add New Instructors</a></li>
                             </ul>
                         </li>
                         <li>
@@ -253,7 +256,7 @@
                             </ul>
                         </li>
                 
-                        <li><a href="../roles/all.html" class="material-ripple"><i class="material-icons">lock</i> Roles</a></li>
+                        <li><a href="./all.html" class="material-ripple"><i class="material-icons">lock</i> Roles</a></li>
                         <li><a href="#" class="material-ripple"><i class="material-icons">settings</i> Settings</a></li>
 
 
@@ -457,100 +460,119 @@
                             <i class="material-icons">group</i> 
                         </div>
                         <div class=header-title>
-                            <h1>Add New Instructor</h1>
+                            <h1>Role's Information</h1>
                             <small>Get all informations at your fingertip.</small>
                             <ol class=breadcrumb>
                                 <li><a href="../index.html">Home</a></li>
-                                <li><a href="../instructor/">Instructor</a></li>
-                                <li class=active>Add New</li>
+                                <li class=active>View Roles</li>
                             </ol>
+                            <a href="./add.html" class="btn btn-primary btn-outline"><i class="material-icons">add</i>Create</a>
+
                         </div>
                     </div>
 
+                   
+                    <div class="row"> 
+                        <div class="col-sm-12 col-md-6">
+                            <div class="column">
+                              <!-- view modal -->
+                              <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <div class="n-modal-body">
+                                        <div class="">
+                                            <h3>Role Information</h3>
+                                            
+                                            <div class="modal-table">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Role:</th>
+                                                            <td>TEST</td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            
+                                        </div>
 
-                    <div class="row">
-                        
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="panel panel-bd lobidrag">
-                                    <div class="panel-heading">
-                                        <div class="panel-title">
-                                            <h4>Add New Instructor</h4>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-success md-close">Cancel</button>
+                                            
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                    
-                                        <form>
+                                </div>
+                             </div>
+
+                             <!-- Delete modal -->
+                             <div class="md-modal md-effect-1" id="modal-2">
+                                <div class="md-content">
+                                    <div class="n-modal-body">
+                                        <div class="">
+                                            <h3>Are you sure?</h3>
+                                            <div class="text-center">Are you sure you want to delete it? <br> Once it is deleted It cannot be undone.</div>
+
+                                            
+                                            
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button class="btn btn-success md-close">Cancel</button>
+                                            <button class="btn btn-danger md-close">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                                <!-- the overlay element -->
+                                <div class="md-overlay"></div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-bd lobidrag">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Role List</h4>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table id="dataTableStudents" class="table table-bordered table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Roles</th>
+                                                    <th>Permissions</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>TEST</td>
+                                                    <td>TEST</td>
+                                                    
+                                                    <td>
+
+                                                        <a href="#" class="btn btn-success md-trigger " data-modal="modal-1">View</a>
+                                                        <a href="#" class="btn btn-warning">Edit</a>
+                                                        <a href="#" class="btn btn-danger md-trigger" data-modal="modal-2">Delete</a>
+                                                        
+                                                    </td>
                                         
-                                            <div class="form-group">
-                                                <label for="">First Name</label>
-                                                <input class="form-control" type="text" id="" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="">Last Name</label>
-                                                <input class="form-control" type="text" id="" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="">Email</label>
-                                                <input class="form-control" type="email" id="" required>
-                                            </div>
-
-                                            <fieldset class="form-group">
-                                                <label for="">Gender</label>
-                                                <div>
-                                                    <label class="form-check-label">
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                        Male
-                                                    </label>
-                                                    <label class="form-check-label">
-                                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                                        Female
-                                                    </label>
-                                                </div>
-                                               
-                                            </fieldset>
-
-                                            <div class="form-group">
-                                                <label for="">Course</label>
-                                                <select class="form-control" id="">
-                                                    <option>Data Science</option>
-                                                    <option>Cyber Security</option>
-                                                    <option>Web Development</option>
-                                                    <option>UI/UX</option>
-                                                    <option>Mobile Development</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group">
+                                                </tr>
                                                 
-                                                
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="" class="l">Telephone Number</label>
-                                                <input class="form-control" type="tel">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="" class="l">Registration Date</label>
-                                                <input class="form-control" type="date">
-                                            </div>
+                                            </tbody>
 
                                         
-                                           
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                            <button type="submit" class="btn btn-danger">Cancel</button>
-                                        </form>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    
                 </div>
             </div>
         </div>
@@ -568,8 +590,33 @@
          <script src="../assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
          <script src="../assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
          <!-- STRAT PAGE LABEL PLUGINS -->
+         <script src="../assets/plugins/datatables/dataTables.min.js" type="text/javascript"></script>
+
+         <script src="../assets/plugins/modals/classie.js" type="text/javascript"></script>
+        <script src="../assets/plugins/modals/modalEffects.js" type="text/javascript"></script>
+        
          <!-- START THEME LABEL SCRIPT -->
          <script src="../assets/dist/js/app.min.js" type="text/javascript"></script>
          <script src="../assets/dist/js/jQuery.style.switcher.min.js" type="text/javascript"></script>
+         <script>
+             $(document).ready(function () {
+ 
+                 "use strict"; // Start of use strict
+
+ 
+                 $("#dataTableStudents").DataTable({
+                     dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
+                     "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                     buttons: [
+                         {extend: 'copy', className: 'btn-sm'},
+                         {extend: 'csv', title: 'ExampleFile', className: 'btn-sm'},
+                         {extend: 'excel', title: 'ExampleFile', className: 'btn-sm'},
+                         {extend: 'pdf', title: 'ExampleFile', className: 'btn-sm'},
+                         {extend: 'print', className: 'btn-sm'}
+                     ]
+                 });
+ 
+             });
+         </script>
     </body>
 </html>
