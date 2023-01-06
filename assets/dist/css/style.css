@@ -8,10 +8,18 @@
     position: absolute;
     top: 0;
     left: 70px;
-
     margin-top: 9px;
     font-size: 40px;
 }
+
+/* sidebar nav */
+.sidebar .sidebar-nav .nav  li a{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .n-modal-body .avatar-rounded{
     width: 100px;

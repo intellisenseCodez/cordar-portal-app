@@ -183,6 +183,11 @@
                             </ul><!-- /.dropdown-user -->
                         </li><!-- /.Dropdown -->
                         
+                        <li class="log_out">
+                            <a href="#">
+                                <i class="material-icons">power_settings_new</i>
+                            </a>
+                        </li><!-- /.Log out -->
                     </ul> <!-- /.navbar-top-links -->
                 </div>
             </nav>
@@ -192,70 +197,114 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="nav-heading "> <span>Welcome&nbsp;&nbsp;&nbsp;&nbsp;<span></li>
-                        <li class="active"><a href="../index.html" class="material-ripple"><i class="material-icons">home</i> Dashboard</a></li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">group</i> Students <i class="material-icons" style="padding-left: 90px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="../student/all.html">View all Students</a></li>
-                                <li><a href="../student/add.html">Add New Students</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">group</i> Instructor <i class="material-icons" style="padding-left: 85px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="./all.html">View all Instructors</a></li>
-                                <li><a href="./add.html">Add New Instructors</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">book</i> Courses <i class="material-icons" style="padding-left: 94px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="../course/all.html">View all Course</a></li>
-                                <li><a href="../course/add.html">Add New Course</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">timer</i> Attendance <i class="material-icons" style="padding-left: 70px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">Student Attendance</a></li>
-                                <li><a href="#">Instructor Attendance</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">school</i> Exams <i class="material-icons" style="padding-left: 104px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">Exams List</a></li>
-                                <li><a href="#">Exams Timetable</a></li>
-                                <li><a href="#">Results</a></li>
-                                <li><a href="#">Certificates</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">forum</i> Reports <i class="material-icons" style="padding-left: 95px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">Student Report</a></li>
-                                <li><a href="#">Instructor Report</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">announcement</i> Announcement <i class="material-icons" style="padding-left: 45px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="../announce/message.html">Messages</a></li>
-                                <li><a href="../announce/calendar.html">Calendar</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="material-ripple"><i class="material-icons">monetization_on</i> Accounting <i class="material-icons" style="padding-left: 72px;">arrow_drop_down</i></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="#">Fees Type</a></li>
-                                <li><a href="#">Fees</a></li>
-                                <li><a href="#">Expense Type</a></li>
-                                <li><a href="#">Expenses List</a></li>
-                            </ul>
-                        </li>
-                
-                        <li><a href="../roles/all.html" class="material-ripple"><i class="material-icons">lock</i> Roles</a></li>
-                        <li><a href="#" class="material-ripple"><i class="material-icons">settings</i> Settings</a></li>
+                            <li>
+                                <a href="../index.html" class="material-ripple">
+                                    <span><i class="material-icons">home</i> Dashboard</span>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">group</i> Students </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="../student/all.html">View all Students</a></li>
+                                    <li><a href="../student/add.html">Add New Students</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="active">
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">group</i> Instructor </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="../instructor/all.html">View all Instructors</a></li>
+                                    <li><a href="../instructor/add.html">Add New Instructors</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">book</i> Courses </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="../course/all.html">View all Course</a></li>
+                                    <li><a href="../course/add.html">Add New Course</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">timer</i> Attendance </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#">Student Attendance</a></li>
+                                    <li><a href="#">Instructor Attendance</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">school</i> Exams </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#">Exams List</a></li>
+                                    <li><a href="#">Exams Timetable</a></li>
+                                    <li><a href="#">Results</a></li>
+                                    <li><a href="#">Certificates</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">forum</i> Reports </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#">Student Report</a></li>
+                                    <li><a href="#">Instructor Report</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">announcement</i> Announcement </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="../announce/message.html">Messages</a></li>
+                                    <li><a href="../announce/calendar.html">Calendar</a></li>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">monetization_on</i> Accounting </span>
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </a>
+                                <ul class="nav nav-second-level">
+                                    <li><a href="#">Fees Type</a></li>
+                                    <li><a href="#">Fees</a></li>
+                                    <li><a href="#">Expense Type</a></li>
+                                    <li><a href="#">Expenses List</a></li>
+                                </ul>
+                            </li>
+                    
+                            <li>
+                                <a href="./all.html" class="material-ripple">
+                                    <span><i class="material-icons">lock</i> Roles</a></span>
+                                </li>
+                            <li>
+                                <a href="#" class="material-ripple">
+                                    <span><i class="material-icons">settings</i> Settings</span>
+                                </a>
+                            </li>
+    
 
 
                     </ul>
@@ -263,192 +312,7 @@
                 <!-- /.sidebar-collapse -->
             </div>
 
-            <!-- /.Left Sidebar-->
-            <div class="side-bar right-bar">
-                <div class="">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs right-sidebar-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="material-icons">home</i></a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="material-icons">person_add</i></a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="material-icons">chat</i></a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade  in active" id="home">
-                            <ul id="styleOptions" title="switch styling">
-                                <li><b>Dark Skin</b></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-blue.min"><img src="assets/dist/img/theme-color/1.jpg" alt=""/></a></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-dark.min"><img src="assets/dist/img/theme-color/2.jpg" alt=""/></a></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-red-light.min" class="skin-logo"><img src="assets/dist/img/theme-color/5.jpg" alt=""/></a></li>
-                                <li><b>Dark Skin sidebar</b></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-default.min"><img src="assets/dist/img/theme-color/7.jpg" alt=""/> </a></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-red-dark.min"><img src="assets/dist/img/theme-color/6.jpg" alt=""/></a></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-dark-1.min"><img src="assets/dist/img/theme-color/8.jpg" alt=""/></a></li>
-                                <li><b>Light Skin sidebar</b></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-default-light.min" class="skin-logo"><img src="assets/dist/img/theme-color/3.jpg" alt=""/></a></li>
-                                <li><a href="javascript: void(0)" data-theme="skin-white.min"><img src="assets/dist/img/theme-color/4.jpg" alt=""/></a> </li>
-                            </ul>
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade " id="profile">
-                            <h3 class="sidebar-heading">Activity</h3>
-                            <div class="rad-activity-body">
-                                <div class="rad-list-group group">
-                                    <a href="#" class="rad-list-group-item">
-                                        <div class="rad-list-icon bg-red pull-left"><i class="fa fa-phone"></i></div>
-                                        <div class="rad-list-content"><strong>Client meeting</strong>
-                                            <div class="md-text">Meeting at 10:00 AM</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="rad-list-group-item">
-                                        <div class="rad-list-icon bg-yellow pull-left"><i class="fa fa-refresh"></i></div>
-                                        <div class="rad-list-content"><strong>Created ticket</strong>
-                                            <div class="md-text">Ticket assigned to Dev team</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="rad-list-group-item">
-                                        <div class="rad-list-icon bg-primary pull-left"><i class="fa fa-check"></i></div>
-                                        <div class="rad-list-content"><strong>Activity completed</strong>
-                                            <div class="md-text">Completed the dashboard html</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="rad-list-group-item">
-                                        <div class="rad-list-icon bg-green pull-left"><i class="fa fa-envelope"></i></div>
-                                        <div class="rad-list-content"><strong>New Invitation</strong>
-                                            <div class="md-text">Max has invited you to join Inbox</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- /.sidebar-menu -->
-                            <h3 class="sidebar-heading">Tasks Progress</h3>
-                            <ul class="sidebar-menu">
-                                <li>
-                                    <a href="#">
-                                        <h4 class="subheading">
-                                            Task one
-                                            <span class="label label-danger pull-right">40%</span>
-                                        </h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 40%"></div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h4 class="subheading">
-                                            Task two
-                                            <span class="label label-success pull-right">20%</span>
-                                        </h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 20%"></div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h4 class="subheading">
-                                            Task Three
-                                            <span class="label label-warning pull-right">60%</span>
-                                        </h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 60%"></div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h4 class="subheading">
-                                            Task four
-                                            <span class="label label-primary pull-right">80%</span>
-                                        </h4>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 80%"></div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- /.sidebar-menu -->
-                        </div>
-                        <div role="tabpanel" class="tab-pane fade " id="messages">
-                            <div class="message_widgets">
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Naeem Khan</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status available pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar2.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Sala Uddin</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status away pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar3.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Mozammel</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status busy pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar4.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Tanzil</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status offline pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar5.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Amir Khan</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status available pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Salman Khan</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status available pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Tahamina</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status available pull-right"></span>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="inbox-item">
-                                        <div class="inbox-item-img"><img src="assets/dist/img/avatar4.png" class="img-circle" alt=""></div>
-                                        <strong class="inbox-item-author">Jhon</strong>
-                                        <span class="inbox-item-date">-13:40 PM</span>
-                                        <p class="inbox-item-text">Hey! there I'm available...</p>
-                                        <span class="profile-status offline pull-right"></span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.Right Sidebar -->
+            
 
             <div class=control-sidebar-bg></div>
             <div id=page-wrapper>
